@@ -6,11 +6,11 @@ module Util
   
   class Config
     def self.load(json_path)
-      File.open(json_path) do |io|
-        conf = JSON.load(io)
-        
-        return conf
+      conf = File.open(json_path) do |io|
+        JSON.load(io)
       end
+      
+      return DEFAULT.merge(conf)
     end
     
     DEFAULT = {"port" => 8080, "packer" => "./packer.json"}
