@@ -1,5 +1,9 @@
 # Packer::Server
 
+## Build Status
+
+https://travis-ci.org/Kuchitama/packer-server.png
+
 TODO: Write a gem description
 
 ## Installation
