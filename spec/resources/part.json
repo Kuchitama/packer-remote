@@ -1,3 +1,7 @@
 {
-  "port": 9000
+  "port": 9000,
+  "vcs" : {
+    "type" : "git",
+    "url" : "https://host/repository.git"
+  }
 }
