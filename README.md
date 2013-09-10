@@ -2,7 +2,8 @@
 
 ## Build Status
 
-https://travis-ci.org/Kuchitama/packer-server.png
+[![Build Status](https://travis-ci.org/Kuchitama/packer-server.png)](https://travis-ci.org/Kuchitama/packer-server)
+
 
 TODO: Write a gem description
 
