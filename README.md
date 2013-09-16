@@ -1,6 +1,6 @@
 This document is editing now.
 
-# Packer::Server
+# Packer::Remote
 
 This is a tool to use [Packer](http://www.packer.io) on the remote server.
 This starts to build image(s) when this get http request.
@@ -12,7 +12,7 @@ The build process is below.
 
 ## Build Status
 
-[![Build Status](https://travis-ci.org/Kuchitama/packer-server.png)](https://travis-ci.org/Kuchitama/packer-server)
+[![Build Status](https://travis-ci.org/Kuchitama/packer-remote.png)](https://travis-ci.org/Kuchitama/packer-remote)
 
 ## Requrement
 
@@ -29,31 +29,23 @@ You need install [Packer](http://www.packer.io) before use this tool.
 
 ### VCS
 
-paker-serve support git only now.
+paker-remote support git only now.
 
 * Git
 
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Install it yourself as:
 
-    gem 'packer-server'
-
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install packer-server
+    $ gem install packer-remote
 
 ## Usage
 
 ### 1. Create Packer configuration
 
 
-### 2. Create packer-server configuration
+### 2. Create packer-remote configuration
  
 ### 3. Run command
 
