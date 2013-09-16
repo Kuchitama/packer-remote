@@ -98,19 +98,24 @@ $ vi config.json
 ```
 
 **Config settings**
+
 | Fields | Require | Type | Value                              |
 |--------|:-------:|------|------------------------------------|
 | port   | No      | Int  | server port number. Default = 8080 |
-| vcs    | True    | Map  | vcs settinds                       |
-| packer | No      | Map  | packer settinds                    |
+| vcs    | True    | Map  | vcs settinds. Detail is below.     |
+| packer | No      | Map  | packer settinds. Detail is below.  |
+
+
 
 **VCS Settings**
+
 | Fields | Require | Type   | Value                              |
 |--------|:-------:|--------|------------------------------------|
 | type   | True    | String | VCS type name.                     |
 | url    | True    | String | VCS repository url.                |
 
 **Packer Settings**
+
 | Fields | Require | Type   | Value                                                  |
 |--------|:-------:|--------|--------------------------------------------------------|
 | path   | No      | String | The path of packer settings. Defailt = "./packer.json" |
