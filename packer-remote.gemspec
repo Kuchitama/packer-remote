@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'packer/server/version'
+require 'packer/remote/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "packer-server"
-  spec.version       = Packer::Server::VERSION
+  spec.name          = "packer-remote"
+  spec.version       = Packer::Remote::VERSION
   spec.authors       = ["Kuchitama"]
   spec.email         = ["kiyo.kunihira@gmail.com"]
   spec.description   = %q{This is a tool to use Packer on the remote server. This starts to build image(s) when this get http request.}

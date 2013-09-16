@@ -1,5 +1,5 @@
 module Packer
-  module Server
+  module Remote
     VERSION = "0.0.1.SNAPSHOT"
   end
 end
