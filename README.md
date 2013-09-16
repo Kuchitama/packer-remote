@@ -47,6 +47,8 @@ $ mkdir packer-sample
 $ vi packer.json
 ```
 
+A configuration sample is below.
+
 ```packer.json
 {
   "builders": [{
@@ -94,6 +96,24 @@ $ vi config.json
    }
 }
 ```
+
+**Config settings**
+| Fields | Require | Type | Value                              |
+|--------|:-------:|------|------------------------------------|
+| port   | No      | Int  | server port number. Default = 8080 |
+| vcs    | True    | Map  | vcs settinds                       |
+| packer | No      | Map  | packer settinds                    |
+
+**VCS Settings**
+| Fields | Require | Type   | Value                              |
+|--------|:-------:|--------|------------------------------------|
+| type   | True    | String | VCS type name.                     |
+| url    | True    | String | VCS repository url.                |
+
+**Packer Settings**
+| Fields | Require | Type   | Value                                                  |
+|--------|:-------:|--------|--------------------------------------------------------|
+| path   | No      | String | The path of packer settings. Defailt = "./packer.json" |
 
 ### 4. Run command
 
