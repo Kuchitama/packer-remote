@@ -53,12 +53,12 @@ module Packer
         sub_command_parsers
       end
 
-      # todo コマンド自体の引数を扱うOptionParserを用意する
+      # 引数を扱うOptionParserを用意する
       # @return [OptionsParser]
       def self.create_command_parser
         OptionParser.new do |opt|
           sub_command_help = [
-            {name: 'run     [-p port] [-c config]',   summary: 'Create Todo Task'},
+            {name: 'run     [-p port] [-c config]',   summary: 'run a packer remote server'},
           ]
 
           opt.banner = "Usage: #{opt.program_name} [-h|--help] [-v|--version] <command> [<args>]"
