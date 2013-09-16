@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.version       = Packer::Server::VERSION
   spec.authors       = ["Kuchitama"]
   spec.email         = ["kiyo.kunihira@gmail.com"]
-  spec.description   = %q{TODO: Write a gem description}
-  spec.summary       = %q{TODO: Write a gem summary}
+  spec.description   = %q{This is a tool to use Packer on the remote server. This starts to build image(s) when this get http request.}
+  spec.summary       = %q{This is a tool to use Packer on the remote server.}
   spec.homepage      = ""
   spec.license       = "MIT"
 
@@ -19,8 +19,10 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "sinatra",      "~> 1.4.0"
-
-  spec.add_development_dependency "bundler", "~> 1.3"
+  spec.add_dependency "erubis",       "~> 2.7.0"
+  spec.add_dependency "eventmachine", "~> 1.0.3"
+  
+  spec.add_development_dependency "bundler",  "~> 1.3"
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "yard"

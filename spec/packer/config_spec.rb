@@ -29,5 +29,30 @@ describe Packer::Config do
     it 'should raise error when "vcs"."url" and "type" is not setted' do
       expect{ Packer::Config.validateConfig({"vcs"=>{}}) }.to raise_error
     end
+    it 'should raise error. config must have "vcs"."user" when "vcs"."password" setted' do
+      expect{ 
+        Packer::Config.validateConfig(
+          {"vcs"=>{
+            "type" => "git", 
+            "url" => "url", 
+            "password"=>"_password_"}
+          }) }.to raise_error
+    end
+    it 'should not raise error when "vcs"."user" and "vcs"."password" setted' do
+      expect{
+        Packer::Config.validateConfig(
+          {"vcs"=>{
+            "type" => "git", 
+            "url" => "url", 
+            "user" => "_user_", 
+            "passowrd"=>"_password_"}
+          }) 
+      }.not_to raise_error
+    end
+    it 'should not raise error when "vcs"."user" and not setted "vcs"."password" setted' do
+      expect{
+        Packer::Config.validateConfig({"vcs"=>{"type" => "git", "url" => "url", "user" => "_user_"}})
+      }.not_to raise_error
+    end
   end
 end

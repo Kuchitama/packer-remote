@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-require 'packer/server'
+require 'packer/command'
+
+Packer::Command.run(ARGV)

@@ -13,6 +13,9 @@ module Packer
       else
         unless config["vcs"]["type"];   undefined_fields << "'vcs', 'type'";   end 
         unless config["vcs"]["url"];    undefined_fields << "'vcs', 'hoge'";   end
+        if !config["vcs"]["user"] && config["vcs"]["password"] # passwordを設定するならuserも必要
+          undefined_fields << "'vcs', 'user'"
+        end
       end
 
       unless undefined_fields.empty?
