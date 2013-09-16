@@ -1,5 +1,3 @@
-This document is editing now.
-
 # Packer::Remote
 
 This is a tool to use [Packer](http://www.packer.io) on the remote server.
@@ -44,10 +42,72 @@ Install it yourself as:
 
 ### 1. Create Packer configuration
 
+```
+$ mkdir packer-sample
+$ vi packer.json
+```
 
-### 2. Create packer-remote configuration
- 
-### 3. Run command
+```packer.json
+{
+  "builders": [{
+    "type": "amazon-ebs",
+    "region": "us-west-2",
+    "source_ami": "ami-de0d9eb7",
+    "instance_type": "t1.micro",
+    "ssh_username": "ec2-user",
+    "ssh_timeout": "5m",
+    "ami_name": "Packer-{{timestamp}}",
+    "access_key": "YOUR_ACCESS_KEY",
+    "secret_key": "YOUR_SECRET_KEY"
+  }],
+  "provisioners": [{
+    "type": "shell",
+    "inline": ["sudo yum install -y nginx"]
+  }]
+}
+```
+
+### 2. Push your configuration to git
+
+```
+$ git init
+$ git add .
+$ git commit -am "create packer-remote repository"
+$ git push -u "YOUR_REPOSITORY_URI"
+```
+
+### 3. Create packer-remote configuration
+
+```
+$ vi config.json
+```
+
+```config.json
+{
+   "port": 8080,
+   "vcs" : {
+     "url" : "_git_repository_url_",
+     "type": "git"
+   },
+   "packer": {
+     "path" : "./packer.json"
+   }
+}
+```
+
+### 4. Run command
+
+Execute `packer-remote run` to start a server.
+
+```
+$ packer-remote run
+```
+
+### 5. Access to your server
+
+```
+$ curl http://localhost:8080/build
+```
 
 ## Contributing
 
