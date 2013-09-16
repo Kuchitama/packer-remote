@@ -34,9 +34,11 @@ paker-remote support git only now.
 
 ## Installation
 
-Install it yourself as:
+1. Download gem file from [here](https://drive.google.com/folderview?id=0B-273DBGeDw7UnhsWGFDSkZZSHM&usp=sharing).
 
-    $ gem install packer-remote
+2. Install it yourself as:
+
+    $ gem install packer-remote.1.0.0.gem
 
 ## Usage
 
@@ -133,6 +135,12 @@ $ packer-remote run
 ```
 $ curl http://localhost:8080/build
 ```
+
+#### Extra
+
+If you use AWS EC2 and ELB, you can use `/health` as helth check url.
+PackerRemote returns status 200 when it is running.
+
 
 ## Contributing
 
