@@ -34,7 +34,7 @@ paker-remote support git only now.
 
 ## Installation
 
-1. Download gem file from [here](https://drive.google.com/folderview?id=0B-273DBGeDw7UnhsWGFDSkZZSHM&usp=sharing).
+1. Download gem file from [here](https://googledrive.com/host/0B-273DBGeDw7UnhsWGFDSkZZSHM/).
 
 2. Install it yourself as:
 
