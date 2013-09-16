@@ -26,8 +26,10 @@ module Packer
       
       def run_packer
         puts "config: #{@config}"
+        
+        branch = "master"
       
-        Util::Shell.execute("git pull #{@config["vcs"]["url"]}")
+        Util::Shell.execute("git pull #{@config["vcs"]["url"]} #{branch}")
         Util::Shell.execute("packer build #{@config["packer"]["path"]}")
       end
  
